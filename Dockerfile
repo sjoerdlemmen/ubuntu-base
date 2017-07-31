@@ -8,10 +8,6 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial-proposed restricted main 
 # enable multiverse on all repos
 RUN sed -i "/^# deb.*multiverse/ s/^# //" /etc/apt/sources.list
 
-# Set locale
-RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen && \
-    locale-gen 'en_US.UTF-8'
-
 # Install some utilities
 RUN apt-get --quiet update && \
     apt-get install -qy vim \
