@@ -2,11 +2,6 @@
 FROM ubuntu:16.04
 MAINTAINER Sjoerd Lemmen <slemmen@gmail.com>
 
-ENV DEBIAN_FRONTEND="noninteractive" \
-    LANG="en_US.UTF-8" \
-    LC_ALL="en_US.UTF-8" \
-    LANGUAGE="en_US.UTF-8"
-
 # Add the trusty-proposed repo
 RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial-proposed restricted main multiverse universe" >> /etc/apt/sources.list
 
